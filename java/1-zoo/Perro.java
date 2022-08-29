@@ -1,4 +1,6 @@
-public class Perro extends Animal{
+package zoo;
+
+public class Perro extends Animal implements Mascota{
 	/* Atributos */
 	private String nombre;
 	private int edad;
@@ -48,6 +50,20 @@ public class Perro extends Animal{
 	public int estaEsMiEdad() {
 		return this.edad;
 	}
+	
+	
+
+	@Override
+	public void darPatita(String s) {
+			// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void jugar() {
+		// TODO Auto-generated method stub
+		
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -88,4 +104,11 @@ public class Perro extends Animal{
 	public void setRaza(String raza) {
 		this.raza = raza;
 	}
+
+	@Override
+	public void sonar() {
+		System.out.println("Sueno como perro, guau");		
+	}
+	
+	
 }

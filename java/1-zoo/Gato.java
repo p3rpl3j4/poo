@@ -1,3 +1,5 @@
+package zoo;
+
 public class Gato extends Animal{
 	/* Atributos */
 	private String nombre;
@@ -36,6 +38,10 @@ public class Gato extends Animal{
 		System.out.println("Hola, soy un gato, miau");
 	}
 	
+//	@Override
+	public void sonar() {
+		System.out.println("Sueno como gato, maullo");
+	}
 	
 	/**
 	  * @title maullar
