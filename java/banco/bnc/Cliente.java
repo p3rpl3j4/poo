@@ -13,6 +13,12 @@ public class Cliente extends Persona{
 	 */
 	private int nro = 0;
 	
+	
+	public Cliente(String nombre) {
+		super(nombre);
+	}
+
+	
 	public Cliente(String nombre, String apellido, TipoDocumento tipoDoc, int nroDoc) {
 		super(nombre, apellido, tipoDoc, nroDoc);
 		Cliente.numero +=1;
@@ -28,21 +34,9 @@ public class Cliente extends Persona{
 		return nro;
 	}
 
-	//como recibe un Object, lo convierto al tipo de objeto que 
-	//yo deseo trabajar.
-	/**
-	 * Compara si el objeto es igual a uno recibido como parámetro
-	 * @param obj Objeto contra el que se va a comparar el objeto
-	 * @return Retorna verdadero si el tipo y numero de documento del parámtro 
-	 * es igual al tipo y número de documento del objeto sobre el que se aplica el método.
-	 */
+	
 	@Override
-	public boolean equals(Object obj) {
-		Cliente c;
-		if (obj instanceof Cliente ) {
-			c = (Cliente) obj;
-			return this.getTipoDoc() == c.getTipoDoc() && this.getNroDoc() == c.getNroDoc();
-		}
-		return false;
+	public String toString() {
+		return /*this.getTipoDoc()+ */this.getNroDoc()+ this.getNombre() + " " + this.getApellido();//TODO tipo y numero
 	}
 }

@@ -11,6 +11,14 @@ public class Cuenta {
 	public int getNro() {
 		return nro;
 	}
+	
+	public Cuenta(Cliente cliente, double saldo) {
+		super();
+		this.cliente = cliente;
+		this.saldo = saldo;
+		Cuenta.numero +=1;
+		this.nro = Cuenta.numero;	
+	}
 
 	public Cuenta(Cliente cliente, Empleado oficialDeCuenta, double saldo) {
 		super();
@@ -44,5 +52,10 @@ public class Cuenta {
 
 	public Empleado getOficialDeCuenta() {
 		return oficialDeCuenta;
+	}
+
+	/* La definimos como protected para restringir la cantidad de clases que puedan acceder */
+	protected void setSaldo(double saldo) {
+		this.saldo = saldo;
 	}
 }

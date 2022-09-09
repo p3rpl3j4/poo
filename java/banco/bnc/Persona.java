@@ -17,6 +17,19 @@ public class Persona {
 	private int nroDoc;
 	
 
+	public Persona(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+
+	
+	public Persona(String nombre, String apellido) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+	}
+
+
 	/** Constructor que setea TODOS los atributos de persona */
 	public Persona(String nombre, String apellido, TipoDocumento tipoDoc, int nroDoc) {
 		super();
@@ -91,5 +104,16 @@ public class Persona {
 	 */
 	public void setNroDoc(int nroDoc) {
 		this.nroDoc = nroDoc;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Persona) {
+			Persona p = (Persona)obj;
+			
+			if (p.getNroDoc() == this.nroDoc && p.getTipoDoc() == p.tipoDoc)
+				return true;
+		}
+		return super.equals(obj);
 	}
 }
