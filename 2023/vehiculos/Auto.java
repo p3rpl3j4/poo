@@ -1,5 +1,5 @@
 package prueba;
-
+//Clase para representar un auto
 public class Auto {
 	
 	private String marca;
