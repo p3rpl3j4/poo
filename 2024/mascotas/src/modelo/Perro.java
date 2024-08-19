@@ -1,33 +1,25 @@
 package modelo;
 
-public class Perro {
-	private String nombre;
-	private Integer edad;
-	public String raza;
-//	public Persona duenio;
+public class Perro extends Mascota{
 	
 	public Perro() {
-
+		
 	}
 
 	public Perro(String nombre) {
-		this.nombre = nombre;
+		this.setNombre(nombre);
 	}
-
 	
 	public Perro(String nombre, Integer edad) {
-		this.nombre = nombre;
-		this.edad = edad;
+		super(nombre, edad);
 	}
 
-	public String getNombre() {
-		return this.nombre;
+	@Override
+	public void lucirme() {
+		// TODO Auto-generated method stub
+		//super.lucirme();
+		
+		System.out.println("GUAU GUAU muevo la cola entusiasmadamente");
 	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	
-	//HACER LOS METODOS
 	
 }

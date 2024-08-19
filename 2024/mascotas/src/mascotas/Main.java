@@ -1,23 +1,38 @@
 package mascotas;
 
-import modelo.Perro;
+import modelo.*;
 
 public class Main {
-
-	public Main() {
-		// TODO Auto-generated constructor stub
-	}
-
 	//este es el programa principal del proyecto
 	public static void main(String[] args) {
 		
-		Perro p1 = new Perro("Firulais", 1);
-		//Imprimo el nombre Firulais
-		System.out.println(p1.getNombre());
+		Mascota [] mascotas = new Mascota[4];   
 		
+		Perro p1 = new Perro("Toto");
+		Perro p3 = new Perro("Firulais", 4);
+		Gato cat = new Gato("Lushika", 5);
 		
-		//Le cambio el nombre al objeto y lo imprimo
-		p1.setNombre("Toto");
-		System.out.println(p1.getNombre());	
+		//Atención: No puedo instanciar objetos "Mascota" porque es clase abstracta
+		/* 
+		Mascota m1 = new Mascota("Lopez");
+		System.out.println("El perro lopez es mascota pero también perro: ");
+		m1.lucirme();
+		*/
+		mascotas[0] = p1;
+		mascotas[1] = cat;
+		mascotas[2] = p3;
+		
+		Persona adoptante1 = new Persona ("Lucy");
+		Persona adoptante2 = new Persona ("Romualdo");
+		
+		cat.setAdoptante(adoptante1);
+		System.out.println("Fui adoptado por: " + cat.getAdoptante().getNombre());
+			
+		for (Mascota mascota : mascotas) {
+			System.out.println("------------------------");
+			System.out.println(mascota.toString());
+			mascota.lucirme();
+		}
+	
 	}
 }
