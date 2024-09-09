@@ -22,8 +22,11 @@ public class Main {
 		mascotas[1] = cat;
 		mascotas[2] = p3;
 		
+		String s = new String ("Hola");
 		Persona adoptante1 = new Persona ("Lucy");
 		Persona adoptante2 = new Persona ("Romualdo");
+		
+		Perro perro1 = new Perro("Cartucho", 4);
 		
 		cat.setAdoptante(adoptante1);
 		System.out.println("Fui adoptado por: " + cat.getAdoptante().getNombre());

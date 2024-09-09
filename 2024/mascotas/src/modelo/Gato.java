@@ -1,6 +1,6 @@
 package modelo;
 
-public class Gato extends Mascota {
+public class Gato extends Mascota implements IVacunable{
 
 	public Gato() {
 		// TODO Auto-generated constructor stub
@@ -23,6 +23,12 @@ public class Gato extends Mascota {
 		
 		System.out.println("Miauuu, saludo al sol");
 	}
+
+	@Override
+	public void vacunar() {
+		System.out.println("Gato se vacuna");
+	}
+
 }
 
 
