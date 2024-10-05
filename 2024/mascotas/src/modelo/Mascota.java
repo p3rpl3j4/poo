@@ -1,5 +1,8 @@
 package modelo;
 
+import java.util.Comparator;
+import java.util.Objects;
+
 //comentario de linea
 
 /* Comentario de bloque
@@ -9,11 +12,7 @@ package modelo;
  * */
 
 
-/**
- * 
- * */
-
-public abstract class Mascota {
+public abstract class Mascota implements Comparable<Mascota>, Comparator<Mascota>{
 	/** Representa el nombre de la mascota*/
 	private String nombre;
 	
@@ -84,5 +83,22 @@ public abstract class Mascota {
 
 	//este método se implementará en las subclases
 	public abstract void lucirme();
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(edad, nombre);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Mascota other = (Mascota) obj;
+		return edad == other.edad && Objects.equals(nombre, other.nombre);
+	}
 	
 }

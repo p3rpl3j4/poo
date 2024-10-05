@@ -21,14 +21,30 @@ public class Gato extends Mascota implements IVacunable{
 		// TODO Auto-generated method stub
 		//super.lucirme();
 		
-		System.out.println("Miauuu, saludo al sol");
+		System.out.println("Miauuu, saludo al sol y me llamo " + this.getNombre());
 	}
 
 	@Override
 	public void vacunar() {
 		System.out.println("Gato se vacuna");
 	}
-
+	
+	
+	@Override
+	public int compareTo(Mascota m) {
+		// TODO Auto-generated method stub
+		
+		return this.getNombre().compareTo(m.getNombre());
+		
+	}
+	
+	@Override
+	public int compare(Mascota m1, Mascota m2) {
+		int edad1 = m1.getEdad();
+		int edad2 = m2.getEdad();
+		
+		return edad1 - edad2;
+	}
 }
 
 
