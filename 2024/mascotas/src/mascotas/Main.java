@@ -7,6 +7,14 @@ import modelo.*;
 public class Main {
 	//Programa principal del proyecto
 	public static void main(String[] args) {
+		
+		//EmpresaSingleton patitas = new EmpresaSingleton("Patitas TW", "Mitre 655");
+		
+		
+		EmpresaSingleton patitas = EmpresaSingleton.getInstance();
+		
+		patitas.setDirección("San Martin 450");
+		
 		/*---------------------------------------------------------------------------------
 		  Colección TreeSet: Descomentar esta porción para probarlo.
 		  TreeSet no permite duplicados y es ORDENADA (por nombre, implementando en Mascota la Interfaz Comparable                                             
