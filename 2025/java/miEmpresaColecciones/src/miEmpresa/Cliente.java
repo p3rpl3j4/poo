@@ -50,7 +50,7 @@ public class Cliente implements Comparable<Cliente>, Comparator<Cliente>{
 	}
 	@Override
 	public String toString() {
-		return "Soy el Cliente " + apellido + ", " + nombre + " codigo=" + codigo;
+		return "Codigo: " + codigo +" Soy " + apellido + " " + nombre + "" ;
 	}
 
 	//Si comento hashCode y Equals, HashSet no va a identificar duplicados
@@ -70,6 +70,7 @@ public class Cliente implements Comparable<Cliente>, Comparator<Cliente>{
 		Cliente other = (Cliente) obj;
 		return codigo == other.codigo;
 	}
+
 
 	//de Comparable
 	@Override
