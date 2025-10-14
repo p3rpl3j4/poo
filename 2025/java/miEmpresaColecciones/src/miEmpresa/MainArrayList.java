@@ -1,6 +1,8 @@
 package miEmpresa;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Vector;
 
 public class MainArrayList {
 
@@ -22,7 +24,21 @@ public class MainArrayList {
 		//ordeno el arrayList con criterio dado por objeto "Comparator"
 		mis_clientes.sort(comparador);
 		
-		for (Cliente cliente : mis_clientes)
+	/*	for (Cliente cliente : mis_clientes)
 			System.out.println(cliente.toString());	
+		*/
+		
+		Iterator<Cliente> it = mis_clientes.iterator();
+		
+		while(it.hasNext()) {
+			Cliente c =  it.next();
+			System.out.println(c.toString());
+	
+		}
+	
 	}
 }
+
+
+
+
