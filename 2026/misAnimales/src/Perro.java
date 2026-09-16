@@ -37,4 +37,10 @@ public class Perro extends Animal implements IAdoptable {
 		return 0;
 	}
 
+	@Override
+	public String toString() {
+		return "Perro [getNombre()=" + getNombre() + ", getEdad()=" + getEdad() + "]";
+	}
+
+	
 }
